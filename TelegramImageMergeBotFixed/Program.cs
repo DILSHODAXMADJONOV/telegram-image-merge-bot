@@ -18,7 +18,8 @@ namespace TelegramImageMergeBot
 
         static async Task Main()
         {
-            string botToken = "7654954725:AAE8WgR6DwlGt8xKdjVLj4gDqKw9eE18xO0"; // Bot tokeningizni bu yerga yozing
+            string botToken = Environment.GetEnvironmentVariable("BOT_TOKEN");
+
             var botClient = new TelegramBotClient(botToken);
 
             using var cts = new CancellationTokenSource();
